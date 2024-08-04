@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private SpriteRenderer sprite;
     private Rigidbody rb;
+    private Animator animator;
 
     void OnEnable() {
         controls.Enable();
@@ -24,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movement = controls.ReadValue<Vector2>();
         FlipSprite();
+        HandleAnimator();
     }
 
     private void FixedUpdate() {
@@ -38,7 +42,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FlipSprite() {
-        sprite.flipX = movement.x > 0.01 ;
-        
+        sprite.flipX = movement.x <= 0.01 ;
+    }
+
+    private void HandleAnimator() {
+        bool isMoving = Math.Abs(movement.x) > 0.01;
+        animator.SetBool("isMoving", isMoving);
     }
 }

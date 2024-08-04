@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0d0d19d81f5848f283bef83b8dbaf6b
+guid: 478128b57496c4054a3d90ef0fb5236f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: bottie_walk_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 12
+        width: 210
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adda87b4b94954bcf9ea2c25dacff74c
+      internalID: 913158991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +140,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bottie_walk_0: -269323068
+      bottie_walk_1: 913158991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
